@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Remove .html extension from URLs
+RewriteCond % {REQUEST_FILENAME} !-d
+RewriteCond % {REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Handle 404 errors by redirecting to index or a custom 404.html
+ErrorDocument 404 /404.html
