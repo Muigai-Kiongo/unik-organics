@@ -25,7 +25,7 @@ export default function ProgramsPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-stone-700 leading-relaxed font-medium max-w-2xl">
-                Building the technical and operational capacity of Kenyan agriculture to meet global standards through structured advisory frameworks and digital integration.
+                Building the technical and operational capacity of Region agriculture to meet global standards through structured advisory frameworks and digital integration.
               </p>
             </div>
             

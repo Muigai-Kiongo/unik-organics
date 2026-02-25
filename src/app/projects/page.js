@@ -25,7 +25,7 @@ export default function ProjectsPage() {
               </h1>
               
               <p className="text-lg md:text-xl text-stone-700 leading-relaxed font-medium max-w-2xl">
-                An overview of formal engagements involving plant-based land rehabilitation and certification compliance structuring for Kenyan exporters.
+                An overview of formal engagements involving plant-based land rehabilitation and certification compliance structuring for Regional exporters.
               </p>
             </div>
             
