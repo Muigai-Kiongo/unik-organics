@@ -3,16 +3,26 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "UNIK Organics | Independent Agricultural Advisory",
-  description: "Providing objective, science-based guidance to align Kenyan agricultural operations with Rainforest Alliance and EU Organic regulatory frameworks.",
+  title: {
+    default: "UNIK Organics | Regional Technical Advisory",
+    template: "%s | UNIK Organics"
+  },
+  description: "Independent technical advisory providing objective, science-based compliance structuring and ecological restoration across the East African agricultural sector.",
   keywords: [
-    "Agricultural Advisory Kenya", 
+    "Regional Agricultural Advisory Africa", 
     "Rainforest Alliance Compliance", 
     "EU Organic Certification Prep", 
     "KEPHIS Soil Toxicology", 
-    "Land Rehabilitation Kenya",
-    "Internal Management Systems IMS"
+    "Land Rehabilitation",
+    "Internal Management Systems IMS",
+    "Export Compliance Advisory"
   ],
+  
+  icons: {
+    icon: "/logos/unik-favicon.png",
+    shortcut: "/logos/unik-favicon.png",
+    apple: "/logos/unik-favicon.png",
+  },
   authors: [{ name: "UNIK Organics" }],
   creator: "UNIK Organics",
   publisher: "UNIK Organics",
@@ -23,19 +33,25 @@ export const metadata = {
   },
   openGraph: {
     title: "UNIK Organics | Compliance & Ecological Restoration",
-    description: "Independent agricultural advisory providing compliance structuring and ecological rehabilitation protocols for the Kenyan export sector.",
+    description: "Objective technical advisory for regional agricultural operations focusing on RA/EU Organic frameworks.",
     url: "https://unikorganics.com",
     siteName: "UNIK Organics",
     images: [
       {
-        url: "/images/p1.jpeg", // This will show up when you share the link on WhatsApp/LinkedIn
+        url: "/logos/unik.jpeg", 
         width: 1200,
         height: 630,
-        alt: "UNIK Organics Agricultural Advisory",
+        alt: "UNIK Organics Regional Advisory",
       },
     ],
-    locale: "en_KE", // Specifically targeting Kenya
+    locale: "en_KE",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "UNIK Organics | Regional Technical Advisory",
+    description: "Compliance structuring and ecological restoration for the East African export sector.",
+    images: ["/logos/unik.jpeg"],
   },
   robots: {
     index: true,
@@ -53,13 +69,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        
+        <link rel="icon" href="/logos/unik-favicon.png" sizes="any" />
+      </head>
       <body className="antialiased bg-earth-sand text-stone-900 selection:bg-emerald-100 selection:text-emerald-900 flex flex-col min-h-screen">
         <Navbar />
         
-        {/* flex-grow pushes the footer to the bottom of the screen on short pages */}
-        <div className="flex-grow pt-20"> 
+       
+        <main className="flex-grow pt-20"> 
           {children}
-        </div>
+        </main>
         
         <Footer />
       </body>

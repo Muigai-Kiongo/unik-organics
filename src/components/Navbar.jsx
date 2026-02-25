@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,25 +37,42 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           
-          {/* Brand Logo */}
+          {/* Brand Identity: Icon + Stylist Name Layout */}
           <Link 
             href="/" 
-            className="flex items-center gap-3 group relative z-[70]"
+            className="flex items-center gap-4 group relative z-[70]"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <div className={`w-8 h-8 rounded-sm flex items-center justify-center text-white font-bold transition-all duration-300 shadow-sm ${
-              isMobileMenuOpen ? "bg-stone-900" : "bg-primary-green group-hover:bg-[#0a2e18]"
+            {/* Logo Icon with subtle hover effect */}
+            <div className={`relative transition-all duration-500 ease-in-out shrink-0 ${
+              isScrolled ? "w-10 h-10 md:w-12 md:h-12" : "w-12 h-12 md:w-16 md:h-16"
             }`}>
-              U
+              <Image 
+                src="/logos/unik-favicon.png" 
+                alt="UNIK Icon" 
+                fill
+                className="object-contain transition-transform duration-700 group-hover:rotate-[10deg] group-hover:scale-110"
+                priority
+              />
             </div>
-            <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-              isMobileMenuOpen ? "text-stone-900" : "text-stone-900"
-            }`}>
-              UNIK <span className={isMobileMenuOpen ? "text-stone-600" : "text-primary-green"}>ORGANICS</span>
-            </span>
+
+            {/* Typography Stack */}
+            <div className="flex flex-col justify-center border-l border-stone-300 pl-4 h-full">
+              <h1 className={`font-black tracking-tighter leading-none transition-all duration-500 ${
+                isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
+              }`}>
+                <span className="text-stone-900">UNIK</span>{" "}
+                <span className="text-primary-green italic font-serif font-medium">Organics.</span>
+              </h1>
+              <p className={`font-bold uppercase tracking-[0.25em] text-stone-400 transition-all duration-500 ${
+                isScrolled ? "text-[8px]" : "text-[10px]"
+              }`}>
+                Advisory & Ecology
+              </p>
+            </div>
           </Link>
           
-          {/* Desktop Navigation (Enhanced UX with Animated Underlines) */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8 text-sm font-bold text-stone-700">
             <Link href="/programs" className="relative group hover:text-primary-green transition-colors py-2">
               Advisory Programs
@@ -65,11 +83,11 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-green transition-all duration-300 ease-out group-hover:w-full" />
             </Link>
             <a 
-              href="https://wa.me/254758889075" 
-              className={`px-6 py-2.5 rounded-md transition-all duration-300 shadow-sm border ${
+              href="https://wa.me/254713353778" 
+              className={`px-6 py-2.5 rounded-sm transition-all duration-300 shadow-sm border font-bold uppercase tracking-widest text-[11px] ${
                 isScrolled 
                   ? "bg-stone-900 text-white border-stone-900 hover:bg-white hover:text-stone-900" 
-                  : "bg-primary-green text-white border-primary-green hover:bg-transparent hover:text-stone-900"
+                  : "bg-stone-900/10 text-stone-900 border-stone-900/20 backdrop-blur-md hover:bg-stone-900 hover:text-white"
               }`}
             >
               Consultancy Inquiry
@@ -93,7 +111,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Backdrop (Darkened background when drawer is open) */}
+      {/* Mobile Backdrop */}
       <div 
         className={`md:hidden fixed inset-0 bg-stone-900/40 backdrop-blur-sm z-[50] transition-opacity duration-500 ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -102,7 +120,7 @@ export default function Navbar() {
         aria-hidden="true"
       />
 
-      {/* Mobile Off-Canvas Drawer (Slides in from the right) */}
+      {/* Mobile Off-Canvas Drawer */}
       <div 
         className={`md:hidden fixed top-0 right-0 h-[100dvh] w-[75vw] max-w-sm bg-earth-sand shadow-2xl z-[55] transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col border-l border-stone-200 ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -131,12 +149,12 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Contact Details pushed to the bottom of the drawer */}
+          {/* Contact Details */}
           <div className="mt-auto pt-12">
             <a 
-              href="https://wa.me/254758889075" 
+              href="https://wa.me/254713353778" 
               onClick={() => setIsMobileMenuOpen(false)} 
-              className="flex items-center justify-center w-full bg-stone-900 text-white px-6 py-4 rounded-md font-bold text-sm shadow-md hover:bg-stone-700 transition-colors mb-6"
+              className="flex items-center justify-center w-full bg-stone-900 text-white px-6 py-4 rounded-sm font-bold text-[11px] uppercase tracking-widest shadow-md hover:bg-primary-green transition-colors mb-6"
             >
               Consultancy Inquiry
             </a>
@@ -144,10 +162,10 @@ export default function Navbar() {
             <div className="space-y-3">
               <p className="text-[10px] font-bold text-stone-500 uppercase tracking-widest">Direct Contact</p>
               <a href="mailto:info@unikorganics.com" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
-                <span className="text-base">✉️</span> info@unikorganics.com
+                <span className="text-base opacity-70">✉️</span> info@unikorganics.com
               </a>
-              <a href="https://wa.me/254758889075" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
-                <span className="text-base">📞</span> +254 758 889 075
+              <a href="https://wa.me/254713353778" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
+                <span className="text-base opacity-70">📞</span> +254 713 353 778
               </a>
             </div>
           </div>

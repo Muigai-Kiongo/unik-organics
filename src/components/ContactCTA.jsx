@@ -34,7 +34,7 @@ export default function ContactCTA() {
             Submit Formal RFP
           </a>
           <a 
-            href="https://wa.me/254758889075" 
+            href="https://wa.me/254713353778" 
             className="flex items-center justify-center gap-3 bg-transparent border border-stone-600 text-white px-6 py-3 md:px-8 md:py-3.5 rounded-md font-semibold hover:bg-stone-800 hover:border-stone-500 transition-colors w-full sm:w-auto lg:w-full max-w-[280px] lg:max-w-sm text-sm"
           >
             <span className="text-base opacity-70">📞</span>
