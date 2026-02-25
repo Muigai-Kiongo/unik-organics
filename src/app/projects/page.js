@@ -4,83 +4,75 @@ import ContactCTA from "@/components/ContactCTA";
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Soil Toxicity Recovery",
+      title: "Soil Toxicity Mitigation",
       location: "Central Kenya",
-      focus: "Rehabilitating land after heavy chemical usage using organic protocols.",
-      impact: "Reduced toxic levels by 65% in 8 months."
+      scope: "Implementation of organic agronomic protocols to address heavy chemical degradation.",
+      outcome: "Recorded a 65% reduction in toxic compound levels over an 8-month observation period.",
+      image: "/images/ld2.jpeg"
     },
     {
-      title: "Rainforest Alliance Alignment",
+      title: "Group Certification Alignment",
       location: "Rift Valley",
-      focus: "Documentation and mapping of 150+ smallholder farms for group certification.",
-      impact: "100% audit pass rate on first attempt."
+      scope: "Formulation of compliance documentation and farm mapping for a 150-member smallholder cooperative.",
+      outcome: "Cooperative successfully attained Rainforest Alliance certification without major non-conformities.",
+      image: "/images/cf1.jpeg"
     }
   ];
 
   return (
-    <main className="pt-32 min-h-screen bg-earth-sand">
+    <main className="pt-32 bg-earth-sand min-h-screen">
       <Navbar />
-      
-      <div className="max-w-7xl mx-auto px-6 mb-20">
+      <div className="max-w-7xl mx-auto px-6 mb-24">
         <header className="max-w-3xl mb-16">
-          <h1 className="text-5xl font-black text-primary-green mb-6 leading-tight">
-            Land Rehabilitation & <span className="text-accent-brown">Documentation</span>
+          <h1 className="text-4xl md:text-5xl font-black text-stone-900 mb-6">
+            Field Engagements & <br/><span className="text-primary-green">Baseline Studies</span>
           </h1>
-          <p className="text-xl text-stone-600 leading-relaxed">
-            From soil sample collection in collaboration with <strong>KEPHIS</strong> to final certification audit readiness, 
-            our projects demonstrate the power of sustainable restoration.
+          <p className="text-lg text-stone-600">
+            An overview of recent advisory mandates involving land rehabilitation and certification structuring.
           </p>
         </header>
 
+        {/* Factual Project Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-24">
-          {projects.map((project, i) => (
-            <div key={i} className="bg-white p-10 rounded-[2.5rem] border border-stone-200 shadow-sm">
-              <span className="text-xs font-bold text-accent-brown uppercase tracking-widest block mb-4">
-                {project.location}
-              </span>
-              <h3 className="text-2xl font-bold text-stone-900 mb-4">{project.title}</h3>
-              <p className="text-stone-600 mb-6">{project.focus}</p>
-              <div className="py-4 border-t border-stone-100">
-                <p className="text-sm font-bold text-primary-green">Impact: {project.impact}</p>
+          {projects.map((p, i) => (
+            <div key={i} className="bg-white rounded-xl overflow-hidden border border-stone-200 flex flex-col">
+              <div className="h-64 overflow-hidden border-b border-stone-200">
+                <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+              </div>
+              <div className="p-8 flex-grow">
+                <p className="text-xs font-bold text-stone-500 uppercase tracking-widest mb-2">{p.location}</p>
+                <h3 className="text-xl font-bold text-stone-900 mb-4">{p.title}</h3>
+                <div className="space-y-4">
+                  <div>
+                    <span className="block text-xs font-bold text-stone-400 uppercase mb-1">Scope of Work</span>
+                    <p className="text-stone-700 text-sm leading-relaxed">{p.scope}</p>
+                  </div>
+                  <div>
+                    <span className="block text-xs font-bold text-stone-400 uppercase mb-1">Recorded Outcome</span>
+                    <p className="text-stone-700 text-sm leading-relaxed">{p.outcome}</p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Documentation Section */}
-        <section className="bg-[#14532d] rounded-[3rem] p-12 md:p-20 text-white flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold mb-6">Scientific Validation</h2>
-            <p className="text-emerald-100 mb-6 leading-relaxed">
-              Every project begins with soil sample collection for toxicology tests. 
-              We collaborate directly with the <strong>Kenya Plant Health Research Institute (KEPHIS)</strong> 
-               to ensure data-driven restoration.
+        {/* KEPHIS Section (Objective Tone) */}
+        <div className="bg-stone-900 p-12 lg:p-16 rounded-2xl text-stone-300 flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl font-bold mb-6 text-white">Scientific Partnership: KEPHIS</h2>
+            <p className="text-sm leading-relaxed mb-6">
+              Advisory interventions require accurate baseline data. UNIK Organics conducts preliminary soil and water toxicology assessments in coordination with the <strong>Kenya Plant Health Research Institute (KEPHIS)</strong>. 
             </p>
-            <div className="flex gap-4">
-               <div className="px-4 py-2 bg-white/10 rounded-lg text-xs font-mono">LAB-READY</div>
-               <div className="px-4 py-2 bg-white/10 rounded-lg text-xs font-mono">AUDIT-COMPLIANT</div>
-            </div>
+            <p className="text-sm leading-relaxed">
+              This partnership ensures that all rehabilitation protocols are founded on certified laboratory diagnostics prior to the implementation of internal management systems.
+            </p>
           </div>
-          <div className="md:w-1/2 bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-md">
-            <h4 className="font-bold mb-4 text-emerald-300 uppercase text-xs">The UNIK Methodology</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold">01</span>
-                <span>Baseline Soil Toxicology (KEPHIS)</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold">02</span>
-                <span>Custom Land Rehabilitation Plan</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-emerald-500 font-bold">03</span>
-                <span>Documentation & Internal Audit Prep</span>
-              </li>
-            </ul>
+          <div className="lg:w-1/2 w-full h-64 lg:h-80 rounded-xl overflow-hidden border border-stone-700">
+             <img src="/images/tr3.jpeg" alt="Scientific Soil Testing" className="w-full h-full object-cover opacity-80" />
           </div>
-        </section>
+        </div>
       </div>
-
       <ContactCTA />
     </main>
   );

@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  /* Agricultural Corporate Palette */
   --color-primary-green: #14532d; /* Deep Forest Green */
   --color-accent-brown: #78350f;  /* Earthy Amber/Brown */
   --color-earth-sand: #fdfaf6;    /* Soft Cream Background */
@@ -9,16 +8,14 @@
   --font-display: "Inter", "sans-serif";
 }
 
-/* Custom Base Styles */
 @layer base {
   body {
     background-color: var(--color-earth-sand);
-    color: #1c1917; /* Stone-900 */
+    color: #1c1917;
     @apply antialiased;
   }
 }
 
-/* Corporate Component Shortcuts */
 @layer components {
   .btn-primary {
     @apply bg-primary-green text-white px-8 py-4 rounded-xl font-bold 
@@ -35,5 +32,10 @@
   .section-title {
     @apply text-4xl md:text-5xl font-extrabold text-[#1c1917] 
            tracking-tight mb-6;
+  }
+
+  .hero-pattern {
+    background-image: radial-gradient(circle at 2px 2px, rgba(20, 83, 45, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
   }
 }
