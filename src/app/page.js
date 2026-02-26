@@ -29,11 +29,55 @@ export default function Home() {
       </section>
 
       {/* Core Competencies Section */}
-      <section className="w-full px-6 py-20 md:py-32">
+      <section id="competencies" className="w-full px-6 py-20 md:py-32">
         <div className="max-w-7xl mx-auto space-y-32 md:space-y-40">
           
-          {/* Competency 1: Compliance Structuring */}
+          {/* NEW Competency: Regenerative Farming Advisory */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center group">
+            <div className="lg:w-5/12 order-2 lg:order-1 relative z-10">
+              <span className="block text-primary-green font-bold text-sm tracking-widest uppercase mb-4">Core Advisory</span>
+              <h3 className="text-3xl md:text-4xl font-bold mb-6 text-stone-900 tracking-tight">
+                Regenerative Farming Advisory
+              </h3>
+              <p className="text-lg text-stone-600 mb-10 leading-relaxed">
+                We guide regional producers through the transition to Regenerative Agriculture, aligning operations with sustainability standards while enhancing soil health and biodiversity.
+              </p>
+              
+              <div className="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 shadow-sm relative z-20">
+                <ul className="space-y-4 text-stone-700 font-medium text-sm md:text-base">
+                  <li className="flex items-start gap-4">
+                    <span className="text-primary-green mt-1">✓</span>
+                    <span className="leading-tight">Practice Assessment & Ecological Impact Analysis</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="text-primary-green mt-1">✓</span>
+                    <span className="leading-tight">Chemical-Free Pest & Disease Management Strategies</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="text-primary-green mt-1">✓</span>
+                    <span className="leading-tight">Soil Rehabilitation & Land Restoration Planning</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <span className="text-primary-green mt-1">✓</span>
+                    <span className="leading-tight">Audit Readiness & International Certification Guidance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="lg:w-7/12 w-full order-1 lg:order-2">
+              <div className="relative aspect-[4/3] md:aspect-video w-full overflow-hidden">
+                <img 
+                  src="/images/tr1.jpeg" 
+                  alt="Regenerative Advisory" 
+                  className="w-full h-full object-cover mix-blend-multiply opacity-85 group-hover:opacity-100 transition-opacity duration-700 ease-in-out" 
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Competency 1: Compliance Structuring */}
+          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center group">
             <div className="lg:w-5/12 order-2 lg:order-1 relative z-10">
               <span className="block text-primary-green font-bold text-sm tracking-widest uppercase mb-4">01. Frameworks</span>
               <h3 className="text-3xl md:text-4xl font-bold mb-6 text-stone-900 tracking-tight">
@@ -43,7 +87,7 @@ export default function Home() {
                 Development of Internal Management Systems (IMS) and formal documentation matrices strictly aligned with Rainforest Alliance and EU Organic audit parameters.
               </p>
               
-              <div className="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 shadow-sm relative z-20">
                 <ul className="space-y-4 text-stone-700 font-medium text-sm md:text-base">
                   <li className="flex items-start gap-4">
                     <span className="text-primary-green mt-1">✓</span>
@@ -65,7 +109,6 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Flat / Painted Image */}
             <div className="lg:w-7/12 w-full order-1 lg:order-2">
               <div className="relative aspect-[4/3] md:aspect-video w-full overflow-hidden">
                 <img 
@@ -78,7 +121,7 @@ export default function Home() {
           </div>
 
           {/* Competency 2: Toxicology Baseline */}
-          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center group">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center group">
             <div className="lg:w-5/12 order-2 lg:order-1 relative z-10">
               <span className="block text-accent-brown font-bold text-sm tracking-widest uppercase mb-4">02. Diagnostics</span>
               <h3 className="text-3xl md:text-4xl font-bold mb-6 text-stone-900 tracking-tight">
@@ -88,7 +131,7 @@ export default function Home() {
                 Execution of certified soil and water toxicology screens to establish an objective, scientific baseline for land transition and organic rehabilitation.
               </p>
               
-              <div className="bg-stone-900 rounded-2xl p-6 md:p-8 shadow-xl text-white">
+              <div className="bg-stone-900 rounded-2xl p-6 md:p-8 shadow-xl text-white relative z-20">
                 <p className="text-[10px] md:text-xs font-bold uppercase text-stone-400 tracking-widest mb-6 border-b border-stone-700 pb-3">
                   Certified Parameters
                 </p>
@@ -109,7 +152,6 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Flat / Painted Image */}
             <div className="lg:w-7/12 w-full order-1 lg:order-2">
               <div className="relative aspect-[4/3] md:aspect-video w-full overflow-hidden">
                 <img 
@@ -122,7 +164,7 @@ export default function Home() {
           </div>
 
           {/* Competency 3: Botanical Land Rehabilitation */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center group">
+          <div className="flex flex-col lg:flex-row-reverse gap-12 lg:gap-20 items-center group">
             <div className="lg:w-5/12 order-2 lg:order-1 relative z-10">
               <span className="block text-primary-green font-bold text-sm tracking-widest uppercase mb-4">03. Agronomy</span>
               <h3 className="text-3xl md:text-4xl font-bold mb-6 text-stone-900 tracking-tight">
@@ -132,7 +174,7 @@ export default function Home() {
                 Design and implementation of plant-based agronomic interventions. We utilize specific flora and deep-rooted cover crops to naturally extract soil toxins and rebuild biodiversity.
               </p>
               
-              <div className="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 shadow-sm relative z-20">
                  <ul className="space-y-4 text-stone-700 font-medium text-sm md:text-base">
                   <li className="flex items-start gap-4">
                     <div className="w-1.5 h-1.5 bg-primary-green rounded-full mt-2 flex-shrink-0" />
@@ -150,7 +192,6 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Flat / Painted Image */}
             <div className="lg:w-7/12 w-full order-1 lg:order-2">
               <div className="relative aspect-[4/3] md:aspect-video w-full overflow-hidden">
                 <img 

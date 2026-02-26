@@ -1,47 +1,53 @@
+import Link from "next/link";
+
 export default function ContactCTA() {
   return (
-    <section id="contact" className="w-full bg-stone-900 relative overflow-hidden group border-t border-stone-800">
-      
-      {/* Subtle ambient gradient overlay for depth - spans to the edges now */}
-      <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-primary-green/10 blur-3xl transform translate-x-1/4 -translate-y-1/4 pointer-events-none transition-opacity duration-700 group-hover:opacity-70 opacity-40" />
-      
-      {/* Inner Content Container - keeps text aligned with the rest of the site */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between px-6 py-20 sm:py-24 md:py-32 relative z-10">
+    <section className="bg-stone-900 py-24 px-6 text-center relative overflow-hidden">
+      {/* Subtle background lighting effect */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl opacity-[0.03] pointer-events-none">
+         <div className="w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+      </div>
+
+      <div className="max-w-3xl mx-auto relative z-10">
+        <span className="text-primary-green font-bold text-[10px] tracking-[0.3em] uppercase mb-6 block">
+          Initiate Consultation
+        </span>
+        <h2 className="text-4xl md:text-5xl font-black text-white mb-8 tracking-tight">
+          Ready to Align Your Operations?
+        </h2>
+        <p className="text-lg text-stone-400 mb-12 font-medium max-w-2xl mx-auto leading-relaxed">
+          Contact our advisory team to discuss your farm's transition to certified regenerative and organic standards.
+        </p>
         
-        {/* Advisory Messaging */}
-        <div className="lg:w-7/12 mb-10 lg:mb-0 text-center lg:text-left">
-          <span className="inline-block text-emerald-400 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 border border-emerald-400/30 px-3 py-1.5 rounded-sm bg-emerald-400/10">
-            Technical Consultation
-          </span>
-          
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6 tracking-tight leading-[1.1]">
-            Initiate an Advisory <br className="hidden sm:block" />
-            <span className="text-emerald-300 italic font-serif">Mandate.</span>
-          </h2>
-          
-          <p className="text-sm sm:text-base md:text-lg text-stone-400 leading-relaxed max-w-lg mx-auto lg:mx-0 font-medium">
-            Engage our technical consultancy team to formalize your compliance frameworks, execute baseline diagnostics, or structure botanical rehabilitation protocols.
-          </p>
-        </div>
-        
-        {/* Proportionate, Sleek Action Buttons */}
-        <div className="lg:w-5/12 w-full flex flex-col sm:flex-row lg:flex-col gap-3 md:gap-4 justify-center lg:justify-end items-center lg:items-end">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
           <a 
             href="mailto:info@unikorganics.com" 
-            className="flex items-center justify-center gap-3 bg-white text-stone-900 px-6 py-3 md:px-8 md:py-3.5 rounded-md font-semibold hover:bg-stone-200 transition-colors w-full sm:w-auto lg:w-full max-w-[280px] lg:max-w-sm text-sm shadow-lg"
+            className="w-full sm:w-auto px-10 py-4 bg-white text-stone-900 font-bold uppercase tracking-widest text-[10px] rounded-sm hover:bg-primary-green hover:text-white transition-all duration-300"
           >
-            <span className="text-base opacity-70">✉️</span>
-            Submit Formal RFP
-          </a>
-          <a 
-            href="https://wa.me/254713353778" 
-            className="flex items-center justify-center gap-3 bg-transparent border border-stone-600 text-white px-6 py-3 md:px-8 md:py-3.5 rounded-md font-semibold hover:bg-stone-800 hover:border-stone-500 transition-colors w-full sm:w-auto lg:w-full max-w-[280px] lg:max-w-sm text-sm"
-          >
-            <span className="text-base opacity-70">📞</span>
-            Direct Technical Inquiry
+            Email Advisory Team
           </a>
         </div>
 
+        {/* Dual Contact Numbers Layout */}
+        <div className="border-t border-stone-800 pt-12 flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20">
+          
+          <div className="text-center group">
+            <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] mb-3"></p>
+            <a href="https://wa.me/254722802589" className="text-xl font-medium text-stone-300 group-hover:text-primary-green transition-colors">
+              +254 722 802 589
+            </a>
+          </div>
+
+          <div className="hidden md:block w-px h-12 bg-stone-800" />
+          
+          <div className="text-center group">
+            <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] mb-3"></p>
+            <a href="https://wa.me/254758889075" className="text-xl font-medium text-stone-300 group-hover:text-primary-green transition-colors">
+              +254 758 889 075
+            </a>
+          </div>
+
+        </div>
       </div>
     </section>
   );

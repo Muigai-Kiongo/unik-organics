@@ -8,7 +8,6 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle transparent-to-solid transition and shrink effect on scroll
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -17,7 +16,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Lock background scrolling when mobile drawer is open
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -37,13 +35,12 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           
-          {/* Brand Identity: Icon + Stylist Name Layout */}
+          {/* Brand Identity */}
           <Link 
             href="/" 
             className="flex items-center gap-4 group relative z-[70]"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            {/* Logo Icon with subtle hover effect */}
             <div className={`relative transition-all duration-500 ease-in-out shrink-0 ${
               isScrolled ? "w-10 h-10 md:w-12 md:h-12" : "w-12 h-12 md:w-16 md:h-16"
             }`}>
@@ -56,7 +53,6 @@ export default function Navbar() {
               />
             </div>
 
-            {/* Typography Stack */}
             <div className="flex flex-col justify-center border-l border-stone-300 pl-4 h-full">
               <h1 className={`font-black tracking-tighter leading-none transition-all duration-500 ${
                 isScrolled ? "text-lg md:text-xl" : "text-xl md:text-2xl"
@@ -67,7 +63,7 @@ export default function Navbar() {
               <p className={`font-bold uppercase tracking-[0.25em] text-stone-400 transition-all duration-500 ${
                 isScrolled ? "text-[8px]" : "text-[10px]"
               }`}>
-                Advisory & Ecology
+                Regional Advisory
               </p>
             </div>
           </Link>
@@ -83,7 +79,7 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-green transition-all duration-300 ease-out group-hover:w-full" />
             </Link>
             <a 
-              href="https://wa.me/254713353778" 
+              href="https://wa.me/254722802589" 
               className={`px-6 py-2.5 rounded-sm transition-all duration-300 shadow-sm border font-bold uppercase tracking-widest text-[11px] ${
                 isScrolled 
                   ? "bg-stone-900 text-white border-stone-900 hover:bg-white hover:text-stone-900" 
@@ -122,7 +118,7 @@ export default function Navbar() {
 
       {/* Mobile Off-Canvas Drawer */}
       <div 
-        className={`md:hidden fixed top-0 right-0 h-[100dvh] w-[75vw] max-w-sm bg-earth-sand shadow-2xl z-[55] transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col border-l border-stone-200 ${
+        className={`md:hidden fixed top-0 right-0 h-[100dvh] w-[80vw] max-w-sm bg-earth-sand shadow-2xl z-[55] transform transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] flex flex-col border-l border-stone-200 ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -149,24 +145,24 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Contact Details */}
+          {/* Contact Details with DUAL numbers */}
           <div className="mt-auto pt-12">
-            <a 
-              href="https://wa.me/254713353778" 
-              onClick={() => setIsMobileMenuOpen(false)} 
-              className="flex items-center justify-center w-full bg-stone-900 text-white px-6 py-4 rounded-sm font-bold text-[11px] uppercase tracking-widest shadow-md hover:bg-primary-green transition-colors mb-6"
-            >
-              Consultancy Inquiry
-            </a>
-            
-            <div className="space-y-3">
-              <p className="text-[10px] font-bold text-stone-500 uppercase tracking-widest">Direct Contact</p>
+            <div className="space-y-4">
+              <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] border-b border-stone-200 pb-2">Direct Contact</p>
+              
               <a href="mailto:info@unikorganics.com" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
                 <span className="text-base opacity-70">✉️</span> info@unikorganics.com
               </a>
-              <a href="https://wa.me/254713353778" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
-                <span className="text-base opacity-70">📞</span> +254 713 353 778
-              </a>
+              
+              <div className="flex flex-col gap-3 pt-2">
+                <a href="https://wa.me/254722802589" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
+                  <span className="text-base opacity-70">📞</span> +254 722 802 589
+                </a>
+                <a href="https://wa.me/254758889075" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
+                  <span className="text-base opacity-70">📞</span> +254 758 889 075
+                </a>
+              </div>
+
             </div>
           </div>
           
