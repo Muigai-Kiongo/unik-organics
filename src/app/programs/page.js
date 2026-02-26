@@ -33,7 +33,7 @@ export default function ProgramsPage() {
             <div className="flex flex-row lg:flex-col gap-8 lg:gap-6 text-[10px] md:text-xs font-bold uppercase tracking-widest text-stone-500 border-t lg:border-t-0 lg:border-l border-stone- stone-300 pt-6 lg:pt-0 lg:pl-8 pointer-events-auto">
               <div>
                 <span className="block text-stone-400 mb-1">Operational Scope</span>
-                <span className="text-stone-900">East Africa Sector</span>
+                <span className="text-stone-900">Pan Africa Sector</span>
               </div>
               <div>
                 <span className="block text-stone-400 mb-1">Target Frameworks</span>

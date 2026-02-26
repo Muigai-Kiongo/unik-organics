@@ -79,7 +79,7 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-green transition-all duration-300 ease-out group-hover:w-full" />
             </Link>
             <a 
-              href="https://wa.me/254722802589" 
+              href="https://wa.me/254713353778" 
               className={`px-6 py-2.5 rounded-sm transition-all duration-300 shadow-sm border font-bold uppercase tracking-widest text-[11px] ${
                 isScrolled 
                   ? "bg-stone-900 text-white border-stone-900 hover:bg-white hover:text-stone-900" 
@@ -155,11 +155,11 @@ export default function Navbar() {
               </a>
               
               <div className="flex flex-col gap-3 pt-2">
-                <a href="https://wa.me/254722802589" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
-                  <span className="text-base opacity-70">📞</span> +254 722 802 589
+                <a href="https://wa.me/254713353778" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
+                  <span className="text-base opacity-70">📞</span> +254 713 353 778
                 </a>
-                <a href="https://wa.me/254758889075" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
-                  <span className="text-base opacity-70">📞</span> +254 758 889 075
+                <a href="https://wa.me/+254722802589" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
+                  <span className="text-base opacity-70">📞</span> +254 722 802 589
                 </a>
               </div>
 

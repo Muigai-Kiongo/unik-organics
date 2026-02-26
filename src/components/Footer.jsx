@@ -28,14 +28,15 @@ export default function Footer() {
           
           <span className="hidden sm:block text-stone-200">/</span>
           
-          <a href="https://wa.me/254722802589" className="hover:text-stone-900 transition-colors">
-            +254 722 802 589
+          <a href="hhttps://wa.me/254713353778" className="hover:text-stone-900 transition-colors">
+            +254 713 353 778
           </a>
+          
           
           <span className="hidden sm:block text-stone-200">/</span>
           
-          <a href="https://wa.me/254758889075" className="hover:text-stone-900 transition-colors">
-            +254 758 889 075
+          <a href="https://wa.me/254722802589" className="hover:text-stone-900 transition-colors">
+            +254 722 802 589
           </a>
 
           <span className="hidden xl:block text-stone-200 ml-4">|</span>

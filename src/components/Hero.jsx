@@ -38,7 +38,7 @@ export default function Hero() {
           </h1>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-stone-700 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
-            Providing objective, science-based guidance to align East African agricultural operations with <strong>Rainforest Alliance</strong> sustainability standards and <strong>EU Organic</strong> certification frameworks.
+            Providing objective, science-based guidance to align Pan African agricultural operations with <strong>Rainforest Alliance</strong> sustainability standards and <strong>EU Organic</strong> certification frameworks.
           </p>
           
           {/* Action Buttons - Includes 403 Trailing Slash Fix */}

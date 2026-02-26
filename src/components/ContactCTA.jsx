@@ -21,7 +21,7 @@ export default function ContactCTA() {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
           <a 
-            href="mailto:info@unikorganics.com" 
+            href="mailto:njerisunna@unikorganics.com" 
             className="w-full sm:w-auto px-10 py-4 bg-white text-stone-900 font-bold uppercase tracking-widest text-[10px] rounded-sm hover:bg-primary-green hover:text-white transition-all duration-300"
           >
             Email Advisory Team
@@ -33,19 +33,22 @@ export default function ContactCTA() {
           
           <div className="text-center group">
             <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] mb-3"></p>
+            <a href="https://wa.me/254713353778" className="text-xl font-medium text-stone-300 group-hover:text-primary-green transition-colors">
+              +254 713 353 778
+            </a>
+          </div>
+
+
+          <div className="hidden md:block w-px h-12 bg-stone-800" />
+
+           <div className="text-center group">
+            <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] mb-3"></p>
             <a href="https://wa.me/254722802589" className="text-xl font-medium text-stone-300 group-hover:text-primary-green transition-colors">
               +254 722 802 589
             </a>
           </div>
-
-          <div className="hidden md:block w-px h-12 bg-stone-800" />
           
-          <div className="text-center group">
-            <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] mb-3"></p>
-            <a href="https://wa.me/254758889075" className="text-xl font-medium text-stone-300 group-hover:text-primary-green transition-colors">
-              +254 758 889 075
-            </a>
-          </div>
+          
 
         </div>
       </div>
