@@ -150,8 +150,8 @@ export default function Navbar() {
             <div className="space-y-4">
               <p className="text-[10px] font-bold text-stone-500 uppercase tracking-[0.2em] border-b border-stone-200 pb-2">Direct Contact</p>
               
-              <a href="mailto:info@unikorganics.com" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
-                <span className="text-base opacity-70">✉️</span> info@unikorganics.com
+              <a href="mailto:njerisunna@unikorganics.com" className="text-stone-700 font-medium text-sm flex items-center gap-3 hover:text-primary-green transition-colors">
+                <span className="text-base opacity-70">✉️</span> njerisunna@unikorganics.com
               </a>
               
               <div className="flex flex-col gap-3 pt-2">

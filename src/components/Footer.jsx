@@ -22,7 +22,7 @@ export default function Footer() {
 
         {/* Right: Minimal Directives with Dual Numbers */}
         <div className="flex flex-wrap justify-center lg:justify-end items-center gap-x-6 gap-y-3 text-[9px] font-bold uppercase tracking-[0.2em] text-stone-400">
-          <a href="mailto:info@unikorganics.com" className="hover:text-stone-900 transition-colors">
+          <a href="mailto:njerisunna@unikorganics.com" className="hover:text-stone-900 transition-colors">
             Email
           </a>
           
